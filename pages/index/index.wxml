@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo" style="top:{{showInter ? \"182rpx\":\"88rpx\"}}">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">{{ customData }} </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <button bindtap="toggleLifecycle">{{isShowLifecyleComponent ? 'hide Lifecycle' : 'show Lifecycle'}}</button>
+  <view>{{isShowLifecyleComponent}}</view>
+  <view wx:if="{{isShowLifecyleComponent}}">
+  1111
+  </view>
+  <view wx:else>222</view>
+  <Lifecycle wx:if="{{isShowLifecyleComponent}}" data-demo="demo" data-index="data-index" data-type="{{1111}}" dataIndex="dataIndex"/>
+  <!-- 内部调用 wx.navigateTo 不关闭当前页面-->
+  <navigator url="/pages/logs/logs">page logs(navigator)</navigator>
+  <button bindtap="goToPageAndClosePage">page logs</button>
+  <!-- use template -->
+  <template name="ta">
+    <view>I am a Template</view>
+    <view>{{view}}</view>
+  </template>
+  <import src="./import.wxml" />
+  <template is="aa" data="{{...tData}}"></template>
+</view>

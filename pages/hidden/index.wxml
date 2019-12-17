@@ -1,0 +1,8 @@
+<!--pages/hidden/index.wxml-->
+<view class="page-name widget">
+  <text>pages/hidden/index.wxml</text>
+</view>
+<view class="hidden-attr-case widget">
+  <text class="hidden" hidden="{{true}}">hidden attr tag</text>
+  <view>hide top here</view>
+</view>

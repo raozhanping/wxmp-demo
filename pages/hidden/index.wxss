@@ -1,0 +1,4 @@
+/* pages/hidden/index.wxss */
+page {
+  padding: 20rpx;
+}

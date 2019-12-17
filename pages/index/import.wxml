@@ -1,0 +1,9 @@
+<template name="aa">
+  <!-- 事件在页面级别上定义 -->
+  <view bindtap="tap">I am AA</view>
+  <template name="bb">
+    <view bindtap="tap">I am BBB</view>
+    <view bindtap="tap">{{view}}</view>
+    <view bindtap="tap">{{title}}</view>
+  </template>
+</template>

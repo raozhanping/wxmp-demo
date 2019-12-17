@@ -1,0 +1,9 @@
+<!--pages/grammar.wxml-->
+<text>pages/grammar.wxml</text>
+<import src="./index/import.wxml"/>
+<import src="./index/index.wxml"/>
+<view>
+  <text data="{name: 'raozhanping'}">{'name': 'raozhanping'}</text>
+</view>
+<template is="bb" data="{{title: 'createAnimation'}}"/>
+<template is="ta" data="{{title: 'createAnimation'}}"/>

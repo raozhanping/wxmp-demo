@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "Lifecycle": "../../components/Lifecycle"
+  }
+}
