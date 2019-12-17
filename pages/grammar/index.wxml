@@ -1,4 +1,4 @@
-<!--pages/grammar.wxml-->
+<!--pages/grammar/index.wxml-->
 <text>pages/grammar.wxml</text>
 <import src="./index/import.wxml"/>
 <import src="./index/index.wxml"/>

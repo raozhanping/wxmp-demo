@@ -3,10 +3,15 @@
     "pages/index/index",
     "pages/list/index",
     "pages/logs/logs",
-    "pages/grammar",
+    "pages/grammar/index",
     "pages/setData/index",
     "pages/hidden/index"
   ],
+  "usingComponents": {
+    "mp-badge": "./libs/weui/badge/badge",
+    "mp-cells": "./libs/weui/cells/cells",
+    "mp-cell": "./libs/weui/cell/cell"
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
