@@ -1,0 +1,17 @@
+<!--pages/include/index.wxml-->
+<include src="../../templates/page.wxml" />
+
+<!-- template ref -->
+<mp-dialog title="Inlude" bindbuttontap="tapConfirmDialog" show="{{ showTemplateDialog }}" buttons="{{ buttons }}">
+  <include src="../../templates/include-case-template-ref" />
+</mp-dialog>
+
+<!-- template ref from import -->
+<mp-dialog title="Inlude" bindbuttontap="tapConfirmDialog" show="{{ showImportDialog }}" buttons="{{ buttons }}">
+  <include src="../../templates/include-case-tmpl-ref-from-import" />
+</mp-dialog>
+
+<!-- include -->
+<mp-dialog title="Inlude" bindbuttontap="tapConfirmDialog" show="{{ showIncludeDialog }}" buttons="{{ buttons }}">
+  <include src="../../templates/include-case-include" />
+</mp-dialog>

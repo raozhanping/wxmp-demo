@@ -1,0 +1,7 @@
+<view class="page">
+  <mp-cells class="page__content" title="{{ title }}">
+    <view class="content__list">
+      <button wx:for="{{ contents }}" wx:key="item" class="content__button" bindtap="{{item.tap}}">{{ item.name }}</button>
+    </view>
+  </mp-cells>
+</view>

@@ -2,8 +2,8 @@
   <view class="page__test-case">
     <mp-cells title="微信小程序迁移360小程序测试场景">
       <!-- /pages/template/index -->
-      <navigator url="/pages/template/index">
-        <mp-cell title="template 语法" link></mp-cell>
+      <navigator wx:for="{{ routes }}" wx:key="item" url="{{item.route}}">
+        <mp-cell title="{{ item.title }}" link></mp-cell>
       </navigator>
     </mp-cells>
   </view>

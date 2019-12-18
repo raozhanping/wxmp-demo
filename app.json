@@ -5,7 +5,8 @@
     "pages/logs/logs",
     "pages/grammar/index",
     "pages/setData/index",
-    "pages/hidden/index"
+    "pages/hidden/index",
+    "pages/include/index"
   ],
   "usingComponents": {
     "mp-icon": "./libs/weui/icon/icon",

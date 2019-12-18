@@ -1,0 +1,6 @@
+<template name="template--import">
+  <view>template--import</view>
+</template>
+<view class="template--include">
+  <text>template--include</text>
+</view>

@@ -1,0 +1,5 @@
+<!-- include -->
+<view class="include">
+  <text>scope include</text>
+  <include src="./include-ref.wxml" />
+</view>

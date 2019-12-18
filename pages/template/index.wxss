@@ -1,8 +1,1 @@
 /* pages/template/index.wxss */
-.content__list {
-  padding: 40rpx;
-}
-.content__button {
-  width: 68%;
-  margin-bottom: 20rpx;
-}

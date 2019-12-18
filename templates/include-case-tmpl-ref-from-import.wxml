@@ -1,0 +1,6 @@
+<!-- template reference from import -->
+<import src="./include-ref.wxml" />
+<view class="template--import">
+  <text>scope template--import</text>
+  <template is="template--import"></template>
+</view>

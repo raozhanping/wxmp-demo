@@ -1,0 +1,8 @@
+<!-- template reference -->
+<view class="template">
+  <text>scope template</text>
+  <template name="template--reference">
+    <view>template--reference</view>
+  </template>
+  <template is="template--reference"></template>
+</view>

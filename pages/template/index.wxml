@@ -1,16 +1,9 @@
 <!--pages/template/index.wxml-->
-<import src="../../templates/nest.wxml"/>
+<import src="../../templates/import.wxml"/>
 
-<view class="page">
-  <mp-cells class="page__content" title="Template 语法">
-    <view class="content__list">
-      <button class="content__button" bindtap="openNestDialog">Nest Template</button>
-      <button class="content__button" bindtap="openWrapperDialog">Wrapper Template</button>
-      <button class="content__button" bindtap="openImportDialog">Import Template</button>
-      <button class="content__button" bindtap="openIncludeDialog">Incldue Template</button>
-    </view>
-  </mp-cells>
-</view>
+<!-- Page contents -->
+<include src="../../templates/page.wxml" />
+
 <!-- Nest Template -->
 <mp-dialog title="Nest" bindbuttontap="tapConfirmDialog" show="{{ showNestDialog }}" buttons="{{ buttons }}">
   <template is="nest" data="{{ iconList }}"></template>

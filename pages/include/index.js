@@ -1,24 +1,17 @@
-// pages/template/index.js
+// pages/include/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    showNestDialog: false,
-    showOneButtonDialog: false,
-    showWrapperDialog: false,
+    showTemplateDialog: false,
     showImportDialog: false,
     showIncludeDialog: false,
-    buttons: [{text: '取消'}, {text: '确认'}],
-    oneButtons: {text: '确认'},
-    iconList: ['comment', 'camera', 'eyes-on'],
+    buttons: [{ text: '确认' }],
   },
-  openNestDialog() {
-    this.setData({ showNestDialog: true })
-  },
-  openWrapperDialog() {
-    this.setData({ showWrapperDialog: true })
+  openTemplateDialog() {
+    this.setData({ showTemplateDialog: true })
   },
   openImportDialog() {
     this.setData({ showImportDialog: true })
@@ -26,26 +19,23 @@ Page({
   openIncludeDialog() {
     this.setData({ showIncludeDialog: true })
   },
-  tapConfirmDialog(e) {
+  tapConfirmDialog() {
     this.setData({
-      showNestDialog: false,
-      showWrapperDialog: false,
+      showTemplateDialog: false,
       showImportDialog: false,
       showIncludeDialog: false,
     })
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.setData({
-      title: 'template 语法',
+      title: 'Include 语法',
       contents: [
-        { name: 'Nest Template', tap: 'openNestDialog' },
-        { name: 'Wrapper Template', tap: 'openWrapperDialog' },
-        { name: 'Import Template', tap: 'openImportDialog' },
-        { name: 'Incldue Template', tap: 'openIncludeDialog' },
+        { name: 'Include Template', tap: 'openTemplateDialog' },
+        { name: 'Include Import', tap: 'openImportDialog' },
+        { name: 'Include Include', tap: 'openIncludeDialog' },
       ]
     })
   },
