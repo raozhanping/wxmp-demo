@@ -1,0 +1,55 @@
+<!-- pure nest -->
+<template name="nest">
+  <!-- <view wx:for="{{ iconList }}" wx:for-item="item" wx:for-index="$index" wx:key="$index">
+    <view class="nest__icon" style="background: #f8f8f8;">
+      <mp-icon type="outline" size="23" icon="{{ item }}" inline/>
+      <view>{{ item }}</view>
+    </view>
+  </view> -->
+  <view>template nest</view>
+
+  <template name="nest__B">
+    <view>template nest__B</view>
+  </template>
+</template>
+
+<!-- nest template inside a wrapper element -->
+<view class="wrapper">
+  <view>content outside template</view>
+  <template name="wrapper__nest">
+    <view>wrapper__nest</view>
+
+    <template name="wrapper__nest__B">
+      <view>wrapper__nest__B</view>
+    </template>
+  </template>
+</view>
+
+<!-- import template and lead in template that be imported -->
+<import src="./audio.wxml" />
+<view class="import">
+  <view>content outside template</view>
+  <template name="import__nest">
+    <view>import__nest</view>
+
+    <template name="import__nest__B">
+      <view>import__nest__B</view>
+    </template>
+
+    <template is="audio"></template>
+  </template>
+</view>
+
+<!-- include template -->
+<view class="include">
+  <view>content outside template</view>
+  <template name="include__nest">
+    <view>include__nest</view>
+
+    <template name="include__nest__B">
+      <view>include__nest__B</view>
+    </template>
+
+    <include src="./audio.wxml"></include>
+  </template>
+</view>

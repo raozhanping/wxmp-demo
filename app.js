@@ -2,7 +2,6 @@
 class A {
   a = 1
 }
-console.log(new A())
 App({
   onLaunch: function () {
     console.log('App: onLaunch...')
@@ -19,7 +18,7 @@ App({
     // 获取用户信息
     wx.getSetting({
       success: res => {
-        console.log(res)
+        // console.log(res)
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
@@ -29,8 +28,8 @@ App({
 
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
-              console.log(this)
-              console.log(this.userInfoReadyCallback)
+              // console.log(this)
+              // console.log(this.userInfoReadyCallback)
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
               }

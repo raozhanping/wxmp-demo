@@ -79,6 +79,13 @@
 					"id": -1,
 					"name": "pages/hidden/index",
 					"pathName": "pages/hidden/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/template/index",
+					"pathName": "pages/template/index",
 					"scene": null
 				}
 			]

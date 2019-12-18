@@ -1,13 +1,15 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/list/index",
+    "pages/template/index",
     "pages/logs/logs",
     "pages/grammar/index",
     "pages/setData/index",
     "pages/hidden/index"
   ],
   "usingComponents": {
+    "mp-icon": "./libs/weui/icon/icon",
+    "mp-dialog": "./libs/weui/dialog/dialog",
     "mp-badge": "./libs/weui/badge/badge",
     "mp-cells": "./libs/weui/cells/cells",
     "mp-cell": "./libs/weui/cell/cell"

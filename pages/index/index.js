@@ -4,10 +4,8 @@ define('pages/index/demo.js', function() {
   console.log(11)
 })
 import util from './util.js'
-console.log(util)
 const app = getApp()
-console.log(getCurrentPages())
-console.log('Page getApp:', app.data)
+
 Page({
   customData: 'Hello Page Custom Data',
   data: {

@@ -1,2 +1,6 @@
 /**app.wxss**/
 @import './libs/weui/weui-wxss/weui.wxss';
+
+.page-title {
+  padding: 40rpx;
+}

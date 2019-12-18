@@ -1,0 +1,33 @@
+<!--pages/template/index.wxml-->
+<import src="../../templates/nest.wxml"/>
+
+<view class="page">
+  <mp-cells class="page__content" title="Template 语法">
+    <view class="content__list">
+      <button class="content__button" bindtap="openNestDialog">Nest Template</button>
+      <button class="content__button" bindtap="openWrapperDialog">Wrapper Template</button>
+      <button class="content__button" bindtap="openImportDialog">Import Template</button>
+      <button class="content__button" bindtap="openIncludeDialog">Incldue Template</button>
+    </view>
+  </mp-cells>
+</view>
+<!-- Nest Template -->
+<mp-dialog title="Nest" bindbuttontap="tapConfirmDialog" show="{{ showNestDialog }}" buttons="{{ buttons }}">
+  <template is="nest" data="{{ iconList }}"></template>
+  <template is="nest__B" data="{{ iconList }}"></template>
+</mp-dialog>
+<!-- wrapper Template -->
+<mp-dialog title="Wrapper" bindbuttontap="tapConfirmDialog" show="{{ showWrapperDialog }}" buttons="{{ buttons }}">
+  <template is="wrapper__nest"></template>
+  <template is="wrapper__nest__B"></template>
+</mp-dialog>
+<!-- import Template -->
+<mp-dialog title="Import" bindbuttontap="tapConfirmDialog" show="{{ showImportDialog }}" buttons="{{ buttons }}">
+  <template is="import__nest"></template>
+  <template is="import__nest__B"></template>
+</mp-dialog>
+<!-- inlude Template -->
+<mp-dialog title="Include" bindbuttontap="tapConfirmDialog" show="{{ showIncludeDialog }}" buttons="{{ buttons }}">
+  <template is="include__nest"></template>
+  <template is="include__nest__B"></template>
+</mp-dialog>
