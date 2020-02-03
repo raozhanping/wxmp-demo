@@ -5,7 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    a: 1
+    a: 1,
+    _data: {
+      // arr: [{ a: 1 }, 'end'],
+      null: null,
+      undefined: undefined,
+      number: 0,
+      string: 'string',
+      boolean: 'boolean',
+      array: [],
+      object: {}
+    }
   },
 
   /**
@@ -13,13 +23,25 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      'c.d': 1,
-      'a.b.c': {
-        'b.c': {a: 1}
-      }
+      title: 'SetData 接口',
+      contents: [
+        { name: 'Array', tap: 'setArray' }
+      ]
     })
-    console.log('Page setData', this)
-    console.log('Page setData', this.data)
+  },
+  setArray() {
+    // 什么时候需要merge data
+    // case 1:
+    // this.setData({ '_data.array[0]': { a: 1 } })
+    // this.setData({ '_data.array[0].b': { b: 2 } }) 
+    // result -> array: [{ a: 1, b: { b: 2 } }]
+    // case 2:
+    // this.setData({ '_data.array[0]': { a: 1 } })
+    // this.setData({ '_data.array[0]': { b: 2 } })
+    // this.setData({_data: { array: [{ c: 1 }] } })
+    // result -> array: [{ b: 2  }]
+
+    console.dir(this.data._data.array)
   },
 
   /**

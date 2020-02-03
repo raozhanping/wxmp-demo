@@ -1,13 +1,14 @@
 //app.js
-class A {
-  a = 1
-}
-App({
+console.log('before-App')
+const app = App({
   onLaunch: function () {
     console.log('App: onLaunch...')
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
+    setTimeout(() => {
+      console.log('App: onLaunch async')
+    })
     wx.setStorageSync('logs', logs)
     // 登录
     wx.login({
@@ -39,8 +40,15 @@ App({
       }
     })
   },
+  onShow () {
+    console.log('app--onShow')
+  },
+  onHide () {
+    console.log('app--onHide')
+  },
   data: 'Hello App',
   globalData: {
     userInfo: null
   }
 })
+console.log('App return value', app)

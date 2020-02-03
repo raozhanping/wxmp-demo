@@ -54,11 +54,11 @@ Component({
 
   },
   created: function() {
-    console.info('Component Lifecycle created...')
+    console.warn('Component Lifecycle created...')
     console.log(this.properties)
   },
   attached: function() {
-    console.log('Component Lifecycle attached...')
+    console.warn('Component Lifecycle attached...')
   },
   /**
    * created 和 attached 先于 Page onLoad
@@ -67,15 +67,26 @@ Component({
    * Page onShow
    */
   ready: function() {
-    console.info('Component Lifecycle ready...')
+    console.warn('Component Lifecycle ready...')
   },
   /**
    * Page onoReady
    */
   moved: function() {
-    console.info('Component Lifecycle moved...')
+    console.warn('Component Lifecycle moved...')
   },
   detached: function() {
-    console.info('Component Lifecycle detached...')
+    console.warn('Component Lifecycle detached...')
+  },
+  pageLifetimes: {
+    show: function () {
+      console.warn('Component: onShow', 'Component in Page lifetimes')
+    },
+    hide() {
+      console.warn('Component: onHide', 'Component in Page lifetimes')
+    },
+    resize() {
+      console.warn('Component: onResize', 'Component in Page lifetimes')
+    }
   }
 })

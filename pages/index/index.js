@@ -4,6 +4,7 @@ Page({
     routes: [
       { route: '/pages/template/index', title: 'template 语法' },
       { route: '/pages/include/index', title: 'include 语法' },
+      { route: '/pages/setData/index', title: 'setData 接口' },
     ]
   },
 

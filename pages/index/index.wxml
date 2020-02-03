@@ -7,4 +7,5 @@
       </navigator>
     </mp-cells>
   </view>
+  <Lifecycle />
 </view>
